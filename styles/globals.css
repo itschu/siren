@@ -104,3 +104,11 @@ footer,
 .active {
 	@apply border-b-2 pb-1 border-gray-400 font-bold text-gray-700;
 }
+
+.dash-menu li {
+	@apply font-medium cursor-pointer;
+}
+
+li.active-dash-menu {
+	@apply font-bold text-lg;
+}

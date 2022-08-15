@@ -10,8 +10,6 @@ const Login = () => {
 		e.preventDefault();
 
 		if (isNotEmpty(formData.email) && isNotEmpty(formData.password)) {
-			router.push("/account");
-
 			try {
 				const req = await fetch(
 					`${process.env.NEXT_PUBLIC_HOST}/api/auth/login`,

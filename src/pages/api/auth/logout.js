@@ -1,15 +1,6 @@
 import { serialize } from "cookie";
-import authApi from "@/config/auth-api";
 
 const logout_api = async (req, res) => {
-	const { headers } = req;
-	const authenticate = await authApi(headers?.authorization);
-
-	if (!authenticate.status)
-		return res
-			.status(401)
-			.json({ success: authenticate.status, data: authenticate.msg });
-
 	const { cookies } = req;
 	const jwt = cookies.sirenJournal;
 

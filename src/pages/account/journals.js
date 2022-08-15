@@ -2,21 +2,21 @@ import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import HamburgerMenu from "@/components/hamburger-menu";
 import HtmlHead from "@/components/head";
-import Dashboard from "@/components/account/dashboard";
+import AccountJournal from "@/components/account/journal";
 
-const DashboardPage = () => {
+const JournalPage = () => {
 	return (
 		<>
-			<HtmlHead currentPage={"Dashboard"} />
+			<HtmlHead currentPage={"My Journals"} />
 			<Nav loggedIn={true} />
 			<HamburgerMenu loggedIn={true} />
-			<Dashboard />
+			<AccountJournal />
 			<Footer />
 		</>
 	);
 };
 
-export default DashboardPage;
+export default JournalPage;
 
 export const getServerSideProps = async (context) => {
 	const { cookies } = context.req;
